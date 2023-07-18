@@ -78,7 +78,6 @@ $('#data-list').dataList({
 **Example**:
 ```js
 $('#data-list').dataList({
-    // ...
     placeholder: 'Choose one fruit',
 });
 ```
@@ -90,7 +89,6 @@ $('#data-list').dataList({
 **Example**:
 ```js
 $('#data-list').dataList({
-    // ...
     selectedValue: ['apple'],
 });
 ```
