@@ -44,6 +44,28 @@ $('#data-list').dataList({
     ],
 });
 ```
+## inputExtendClass
+**Type**: Array
+
+**Default**: []
+
+**Example**:
+```js
+$('#data-list').dataList({
+    inputExtendClass: ['input-class-1', 'input-class-2']
+});
+```
+## itemExtendClass
+**Type**: Array
+
+**Default**: []
+
+**Example**:
+```js
+$('#data-list').dataList({
+    itemExtendClass: ['item-class-1', 'item-class-2']
+});
+```
 ## itemContainerSelector
 **Type**: String|null
 
@@ -70,6 +92,17 @@ $('#data-list').dataList({
     name: 'id[]',
 });
 ```
+## optionExtendClass
+**Type**: Array
+
+**Default**: []
+
+**Example**:
+```js
+$('#data-list').dataList({
+    optionExtendClass: ['option-class-1', 'option-class-2']
+});
+```
 ## placeholder
 **Type**: String
 
@@ -90,5 +123,16 @@ $('#data-list').dataList({
 ```js
 $('#data-list').dataList({
     selectedValue: ['apple'],
+});
+```
+## wrapExtendClass
+**Type**: Array
+
+**Default**: []
+
+**Example**:
+```js
+$('#data-list').dataList({
+    wrapExtendClass: ['wrap-class-1', 'wrap-class-2']
 });
 ```
