@@ -11,8 +11,9 @@
                 // { 'value': 'example', 'text': 'example' },
             ],
             inputExtendClass: [],
-            itemExtendClass: [],
             itemContainerSelector: null,
+            itemExtendClass: [],
+            itemRemoveIcon: '&#10006;',
             name: '',
             optionExtendClass: [],
             placeholder: '',
@@ -111,15 +112,18 @@
             this.empty()
                 .html(
                     `<div class="${wrapAllClass}">
-                        <input type="text" class="${inputAllClass}" placeholder="${settings.placeholder}" autocomplete="off">
+                        <input type="text" class="${inputAllClass}"
+                            placeholder="${settings.placeholder}" autocomplete="off">
                         <ul class="${optionAllClass}"></ul>
                     </div>`
                 );
             getDOM();
             if (settings.selectedValue.length > 0) {
                 for (const option of settings.data) {
-                    if (settings.selectedValue.includes(option.value)) {
-                        buildItemHtml(option.value, option.text);
+                    for (const selected of settings.selectedValue) {
+                        if (selected == option.value) {
+                            buildItemHtml(option.value, option.text);
+                        }
                     }
                 }
             }
@@ -136,7 +140,8 @@
                 <span class="${itemAllClass}" data-value="${value}">
                     ${text}
                     <input type="text" name="${settings.name}" value="${value}" style="display: none;">
-                    <span class="close" onclick="this.closest('.${itemClass}').remove()">&#10006;</span>
+                    <span class="close"
+                        onclick="this.closest('.${itemClass}').remove()">${settings.itemRemoveIcon}</span>
                 </span>
             `;
             $(item).insertBefore(

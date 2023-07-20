@@ -55,17 +55,6 @@ $('#data-list').dataList({
     inputExtendClass: ['input-class-1', 'input-class-2']
 });
 ```
-## itemExtendClass
-**Type**: Array
-
-**Default**: []
-
-**Example**:
-```js
-$('#data-list').dataList({
-    itemExtendClass: ['item-class-1', 'item-class-2']
-});
-```
 ## itemContainerSelector
 **Type**: String|null
 
@@ -79,6 +68,28 @@ $('#data-list').dataList({
 
 $('#data-list').dataList({
     itemContainerSelector: '.container-class',
+});
+```
+## itemExtendClass
+**Type**: Array
+
+**Default**: []
+
+**Example**:
+```js
+$('#data-list').dataList({
+    itemExtendClass: ['item-class-1', 'item-class-2']
+});
+```
+## itemRemoveIcon
+**Type**: String
+
+**Default**: '&#10006;'
+
+**Example**:
+```js
+$('#data-list').dataList({
+    itemRemoveIcon: '<i class="far fa-times"></i>'
 });
 ```
 ## name
