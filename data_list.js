@@ -86,6 +86,7 @@
         };
 
         // Get DOM
+        const rootDOM = this;
         var wrapDOM, inputDOM, optionDOM, optionLiDOM, itemDOM;
         const getDOM = () => {
             wrapDOM = this.find(`.${wrapClass}`);
@@ -178,12 +179,13 @@
                 .on('click', function () {
                     const value = $(this).data('value');
                     const text = $(this).text();
-                    if ($(`.${itemClass}[data-value="${value}"]`).length > 0) {
+                    if (rootDOM.find(`.${itemClass}[data-value="${value}"]`).length > 0) {
                         return;
                     }
                     buildItemHtml(value, text);
                     inputDOM.val('');
                 });
+            optionDOM.css('display', 'block');u
         };
 
         // Methods
@@ -195,7 +197,6 @@
                 //
                 inputDOM.on('focus', function() {
                     buildOptionHtml();
-                    optionDOM.css('display', 'block');
                 })
                     .on('blur', function() {
                         setTimeout(() => {
