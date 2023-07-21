@@ -185,7 +185,7 @@
                     buildItemHtml(value, text);
                     inputDOM.val('');
                 });
-            optionDOM.css('display', 'block');u
+            optionDOM.css('display', 'block');
         };
 
         // Methods
